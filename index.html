@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/fevicon.png" type="image/x-icon">
+  <title>DreamHomes Real Estate</title>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.gif" alt="logo" id="headerimg">
+    <h1>DreamHomes Real Estate</h1> 
+  </header>
+  <nav>
+    <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('listings')">Listings</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('contact')">Contact</a>
+    <a onclick="showPage('calculator')">EMI Calculator</a>
+  </nav>
+  <main>
+    <section id="home" class="page active">
+      <h2>Welcome to DreamHomes</h2>
+      <p>Your dream home is just a few clicks away. Discover properties tailored to your lifestyle and connect with experienced agents ready to assist.</p>
+      <div class="features">
+        <div class="feature">
+          <h3>Verified Listings</h3>
+          <p>All properties are verified and include detailed information and images.</p>
+        </div>
+        <div class="feature">
+          <h3>Expert Agents</h3>
+          <p>Our licensed agents are here to guide you through every step of the buying or renting process.</p>
+        </div>
+        <div class="feature">
+          <h3>Easy Search Tools</h3>
+          <p>Use filters and maps to easily find properties that match your needs and budget.</p>
+        </div>
+      </div>
+  <br>   
+      <h2>Why Choose Us?</h2>
+      <div class="features">
+          <div class="feature">
+              <h3>Local Expertise</h3>
+              <p>Deep understanding of the Bengaluru real estate market.</p>
+          </div>
+          <div class="feature">
+              <h3>Wide Range of Properties</h3>
+              <p>Extensive listings to suit every need and budget.</p>
+          </div>
+          <div class="feature">
+              <h3>Dedicated Support</h3>
+              <p>Experienced agents to guide you through the process.</p>
+          </div>
+      </div>
+  </section>
+    <section id="listings" class="page">
+      <h2>Available Listings</h2>
+      <div class="property">
+        <img src="images/home.jpg" alt="" id="property">
+        <h3>Modern Family Home</h3>
+        <p>4 bed · 3 bath · ₹ 4,500,000</p>
+        <p>Location: Bengaluru, KA</p>
+        <button onclick="alert('More details coming soon!')">View Details</button>
+      </div>
+      <div class="property">
+        <img src="images/villa.jpg" alt="" id="property">
+        <h3>Luxury Villa</h3>
+        <p>5 bed · 4 bath · ₹ 8,200,000</p>
+        <p>Location: Bandra, MH</p>
+        <button onclick="alert('More details coming soon!')">View Details</button>
+      </div>
+      <div class="property">
+        <img src="images/condo.jpg" alt="" id="property">
+        <h3>Cozy Downtown Condo</h3>
+        <p>2 bed · 2 bath · ₹ 1,320,000</p>
+        <p>Location: Mysore, KA</p>
+        <button onclick="alert('More details coming soon!')">View Details</button>
+      </div>
+      <div class="property">
+        <img src="images/cottage.jpg" alt="" id="property">
+        <h3>Country Style Cottage</h3>
+        <p>3 bed · 2 bath · ₹ 1,275,000</p>
+        <p>Location: Chikkamagaluru, KA</p>
+        <button onclick="alert('More details coming soon!')">View Details</button>
+      </div>
+    </section>
+    <section id="about" class="page">
+      <h2>About Us</h2>
+      <p>DreamHomes has been matching families with homes for over 20 years.
+        At Dream Home Real Estate, we believe that a home is more than just a place to live — it’s where your story begins. Founded with a vision to help individuals and families find not just properties, but places they can truly call home, we’ve grown into a trusted name in the real estate industry.
+
+With years of experience and a passion for excellence, our team of dedicated professionals offers personalized real estate solutions for buyers, sellers, and investors. Whether you're looking for your first home, a luxury estate, or a profitable investment property, Dream Home Real Estate is here to guide you every step of the way.
+      </p>
+    </section>
+    <section id="contact" class="page">
+      <center><h2>Contact Us</h2></center>
+      <form onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="contact">Mobile:</label>
+        <input type="text" id="number" name="Mobile" required/>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+        <button type="submit">Send</button>
+      </form>
+      <div id="formMessage"></div>
+    </section>
+
+    <section id="calculator" class="page">
+    <div class="calculator">
+      <h2>EMI Calculator</h2>
+      <input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
+      <input type="number" id="interestRate" placeholder="Annual Interest Rate (%)">
+      <input type="number" id="loanTenure" placeholder="Loan Tenure (Years)">
+      <button onclick="calculateEMI()">Calculate EMI</button> <br><br>
+      <button onclick="clearText()">Clear</button>
+      <div class="result" id="emiResult"></div>
+  </div>
+  </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 DreamHomes. All rights reserved.</p>
+  </footer>
+  <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+</body>
+</html>
